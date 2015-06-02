@@ -163,10 +163,10 @@ function deleteUser($id) {
 
 
 function getConnection() {
-	$dbhost="127.0.0.1";
-	$dbuser="root";
-	$dbpass="";
-	$dbname="tech";
+	$dbhost="mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/";
+	$dbuser="adminyvSrFVj";
+	$dbpass="ZFJgbvlubMm3";
+	$dbname="testgithub";
 	$dbh = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);	
 	$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	return $dbh;
