@@ -1,0 +1,38 @@
+<h2>Users</h2>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+     <!-- <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>password</th>
+      <th>Options</th>-->
+	  <th>Name</th>
+      <th>Email</th>
+	  <th>Category</th>
+      <th>Title</th>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+	  <td>{{user.category}}</td>
+	   <td>{{user.title}}</td>
+      <td>{{user.question}}</td>
+	   <td>{{user.solution}}</td>
+      <td><a href="#/edit/{{user.id}}" class="btn-default btn-sm  btn-warning ">CLICK TO ANSWER<i class="glyphicon glyphicon-pencil"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+ 
+
+<a class="btn btn-success " href="#/ask-user">Ask question</a> 
+<a class="btn btn-danger " href="#/">Back to Homepage</a> 
+
+
+
+

@@ -1,0 +1,40 @@
+<h2>Ask question</h2>
+<div class="row">
+  <div class="col-md-6">
+  <form novalidatename="AddNewForm" id="add-new-form" method="post" action="">
+    <input type="hidden" ng-model="user.email" value="{{user.email}}" />
+    <div class="form-group">
+      <label for="first_name">Email:</label>
+      <input class="form-control" type="text" ng-model="user.email" required />
+    </div>
+
+
+	 <div class="form-group">
+	 <label for="category">Category:</label>
+	 <select class="form-control" ng-model="user.category" required="">
+	  <option value="Csharp">C#</option>
+	  <option value="Java">Java</option>
+	  <option value="C">C</option>
+	  <option value="Cplusplus">C++</option>
+	 </select>
+	</div> 
+       
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input class="form-control" type="text" ng-model="user.title" />
+    </div>
+    
+    <div class="form-group">
+	<label for="question">Question:</label>
+	<br>
+	
+	<textarea [class="form-group"] ng-model="user.question">
+   
+
+</textarea> </div>
+    
+    <button class="btn btn-success" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="ask(user)">Post!</button>
+    <a href="#/login-user" class="btn btn-danger">Cancel</a>
+  </form>
+</div>
+</div>

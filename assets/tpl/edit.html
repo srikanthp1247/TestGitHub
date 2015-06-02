@@ -1,0 +1,31 @@
+<h2>Edit user</h2>
+<div class="row">
+  <div class="col-md-6">
+  <form novalidate ng-repeat="user in users" name="AddNewForm" id="add-new-form" method="post" action="">
+    <input type="hidden" ng-model="user.id" value="{{user.id}}" />
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="form-control" type="text" ng-model="user.name" value="{{user.name}}" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" type="text" ng-model="user.email" value="{{user.email}}" required />
+    </div>
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <input class="form-control" type="text" ng-model="user.category" value="{{user.category}}" required />
+    </div>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input class="form-control" type="text" ng-model="user.title" value="{{user.title}}" />
+    </div>
+	 <div class="form-group">
+      <label for="solution">Solution:</label>
+      <input class="form-control" type="text" ng-model="user.solution" value="{{user.solution}}" />
+    </div>
+    <button class="btn btn-success" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="update(user)">Update <span class="glyphicon glyphicon-floppy-disk"></span></button>
+    <button class="btn btn-danger" ng-click="delete(user)">Delete <span class="glyphicon glyphicon-trash"></span></button>
+    <a href="#/lists.html" class="btn">Cancel</a>
+  </form>
+</div>
+</div>
